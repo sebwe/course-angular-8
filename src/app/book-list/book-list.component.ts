@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BOOKS} from '../books';
+import {Book, BOOKS} from '../books';
 
 @Component({
   selector: 'app-book-list',
@@ -12,5 +12,9 @@ export class BookListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(book: Book) {
+    console.log('selected', book);
   }
 }

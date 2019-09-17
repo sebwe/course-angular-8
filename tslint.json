@@ -82,7 +82,7 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "no-trailng-space": false
+    "no-trailing-whitespace": false
   },
   "rulesDirectory": [
     "codelyzer"
