@@ -7,7 +7,8 @@ import {Book, BOOKS} from '../books';
   styleUrls: ['./book-item.component.scss']
 })
 export class BookItemComponent implements OnInit {
-  book = BOOKS[0];
+  @Input()
+  book: Book;
 
   constructor() { }
 
