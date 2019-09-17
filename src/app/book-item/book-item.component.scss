@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+
+  &:hover {
+    background: #ddd;
+  }
+
+  img {
+    max-width: 70px;
+    margin-right: 10px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .author {
+    font-size: 16px;
+    color: gray;
+  }
+}
