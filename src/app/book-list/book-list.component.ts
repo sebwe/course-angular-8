@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Book, BOOKS} from '../books';
+import {Book} from '../books';
+import {BooksService} from '../services/books.service';
 
 @Component({
   selector: 'app-book-list',
@@ -7,11 +8,14 @@ import {Book, BOOKS} from '../books';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  books = BOOKS;
+  books: Book[];
 
-  constructor() { }
+  constructor(
+    private booksService: BooksService,
+  ) { }
 
   ngOnInit() {
+    this.books = this.booksService.getBooks();
   }
 
   onSelect(book: Book) {
