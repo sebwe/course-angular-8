@@ -1,11 +1,16 @@
 :host {
-  display: block;
-  border: 1px solid gray;
-  height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  display: flex;
 
-  app-book-item:nth-child(even) {
-    background: #eee;
+  .list {
+    display: block;
+    width: 50%;
+    border: 1px solid gray;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    app-book-item:nth-child(even) {
+      background: #eee;
+    }
   }
 }

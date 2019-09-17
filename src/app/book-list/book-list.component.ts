@@ -9,6 +9,7 @@ import {BooksService} from '../services/books.service';
 })
 export class BookListComponent implements OnInit {
   books: Book[];
+  selectedBook: Book;
 
   constructor(
     private booksService: BooksService,
@@ -19,6 +20,6 @@ export class BookListComponent implements OnInit {
   }
 
   onSelect(book: Book) {
-    console.log('selected', book);
+    this.selectedBook = book;
   }
 }

@@ -1,2 +1,6 @@
-<app-book-item *ngFor="let book of books" [book]="book"
-                (select)="onSelect($event)"></app-book-item>
+<div class="list">
+  <app-book-item *ngFor="let book of books" [book]="book"
+                  (select)="onSelect($event)"></app-book-item>
+</div>
+
+<app-book-form *ngIf="selectedBook" [book]="selectedBook"></app-book-form>

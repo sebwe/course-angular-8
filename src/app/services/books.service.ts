@@ -5,10 +5,23 @@ import {Book, BOOKS} from '../books';
   providedIn: 'root'
 })
 export class BooksService {
+  private books = BOOKS;
 
-  constructor() { }
+  constructor() {
+  }
 
   getBooks(): Book[] {
-    return BOOKS;
+    return this.books;
+  }
+
+  getBook(id: number): Book {
+    return this.books.find(book => book.id === id);
+  }
+
+  storeBook(updatedBook: Book) {
+    const index = this.books.findIndex(book => book.id === updatedBook.id);
+    if (index >= 0) {
+      this.books[index] = updatedBook;
+    }
   }
 }
