@@ -16,6 +16,8 @@ section {
   img {
     max-width: 70px;
     margin-right: 10px;
+    min-width: 70px;
+    min-height: 100px;
   }
 
   .name {

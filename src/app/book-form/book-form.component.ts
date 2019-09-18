@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Book} from '../books';
 import {BooksService} from '../services/books.service';
 
@@ -23,8 +23,8 @@ export class BookFormComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.form = this.builder.group({
       id: '',
-      name: '',
-      author: '',
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      author: ['', Validators.required],
       published: '',
       available: false,
       coverUrl: '',

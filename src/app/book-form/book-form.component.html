@@ -8,5 +8,5 @@
   <label>Available: <input formControlName="available" type="checkbox"></label>
   <label>Cover URL: <input formControlName="coverUrl"></label>
 
-  <button type="submit">Update</button>
+  <button type="submit" [disabled]="!form.valid">Update</button>
 </form>
