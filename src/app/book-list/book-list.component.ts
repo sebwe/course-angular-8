@@ -22,4 +22,8 @@ export class BookListComponent implements OnInit {
   onSelect(book: Book) {
     this.selectedBook = book;
   }
+
+  onUpdate(book: Book) {
+    this.ngOnInit();
+  }
 }

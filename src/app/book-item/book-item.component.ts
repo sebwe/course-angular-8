@@ -11,7 +11,7 @@ export class BookItemComponent implements OnInit {
   book: Book;
 
   @Output()
-  select = new EventEmitter<Book>();
+  bookSelect = new EventEmitter<Book>();
 
   constructor() { }
 
@@ -19,6 +19,6 @@ export class BookItemComponent implements OnInit {
   }
 
   onClick() {
-    this.select.emit(this.book);
+    this.bookSelect.emit(this.book);
   }
 }

@@ -1,9 +1,12 @@
 <h2>Details</h2>
 
-<div [formGroup]="form" >
+<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+  <input type="hidden" formControlName="id">
   <label>Name: <input formControlName="name"></label>
   <label>Author: <input formControlName="author"></label>
   <label>Published: <input formControlName="published" type="number"></label>
   <label>Available: <input formControlName="available" type="checkbox"></label>
   <label>Cover URL: <input formControlName="coverUrl"></label>
-</div>
+
+  <button type="submit">Update</button>
+</form>
