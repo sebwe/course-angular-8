@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookItemComponent } from './book-item.component';
+import {Book} from '../books';
 
 describe('BookItemComponent', () => {
   let component: BookItemComponent;
@@ -16,6 +17,7 @@ describe('BookItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BookItemComponent);
     component = fixture.componentInstance;
+    component.book = {} as Book;
     fixture.detectChanges();
   });
 

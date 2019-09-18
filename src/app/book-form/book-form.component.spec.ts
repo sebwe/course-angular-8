@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookFormComponent } from './book-form.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {Book} from '../books';
 
 describe('BookFormComponent', () => {
   let component: BookFormComponent;
@@ -8,6 +10,7 @@ describe('BookFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ ReactiveFormsModule ],
       declarations: [ BookFormComponent ]
     })
     .compileComponents();
@@ -16,6 +19,8 @@ describe('BookFormComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BookFormComponent);
     component = fixture.componentInstance;
+    component.book = {} as Book;
+    component.ngOnChanges({});
     fixture.detectChanges();
   });
 
